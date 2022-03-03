@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    font-family: 'PT Sans', sans-serif;
+    background-color: #363636;
+    opacity: 1;
+    background-image: radial-gradient(#afadad 1.3px, #afadad 1.3px);
+    background-size: 26px 26px;
+    min-height: 100vh;
+    
+}  
+
+/* BARRA DE NAVEGACIÓN*/
+.nav-bar{
+    background: #0a0a0a;
+    padding: 15px;
+    display: block;
+    color: white;
+    cursor: pointer;
+    font-size: 0.8em;
+    width: 100%;
+} 
+.menu, .submenu{
+    List-style: none;
+    padding: 0;
+    margin: 0;
+}
+.menu{
+    background: #363636;
+    width: 100%;
+    margin-left: -100%;
+    transition: all 0.5s;
+    
+}
+
+.menu__link{
+    display: block;
+    padding: 20px;
+    color: white;
+    font-size: 1em;
+    text-decoration: none;
+}
+.menu__link:hover {
+    background: #F6961E;
+}
+
+.submenu .menu__link:hover {
+    background: #e0a537;
+}
+.submenu{
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+
+.submenu .menu__link{
+    background: #2883a7;
+    padding-left: 50px;
+}
+
+.mostrar {
+    margin-left: 0;
+}
+
+@media(min-width:1024px) {
+    .nav-bar{
+        display: none;
+    }
+
+    .menu{
+        margin-left: 0;
+        display: flex;
+    }
+    .contenedor-submenu{
+        position: relative;
+    }
+    .submenu{
+        position: absolute;
+        top: 58px;
+        width: 150px;
+        overflow: visible;
+        z-index: 1000;
+        opacity: 0;
+        visibility: hidden;
+    }
+    .contenedor-submenu:hover .submenu{
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+/* HEADER FOOTER Y FORMULARIO */
+
+.hero{
+    background-image: linear-gradient(to top, rgba(255, 171, 15, 0.747) 50%, rgba(0, 0, 0, 0.315) 100%), url(../img/lamudi.png);
+    width: 100%;
+    height: 450px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden; 
+}
+
+.textos-hero{
+    height: 500px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.textos-hero h1{
+    font-size: 60px;
+}
+
+.textos-hero p{
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.textos-hero a{
+    display: block;
+    text-decoration: none;
+    padding: 12px 15px;
+    background: #17276d ;
+    border-radius: 8px;
+    color: white;
+}
+
+.svg-hero{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* ESTILOS GENERALES*/
+
+.contenedor, 
+.wave-contenedor{
+    width: 90%;
+    max-width: 1000px;
+    overflow: hidden;
+    margin: auto;
+    padding: 0 0 80px 0;
+}
+
+.contenedor{
+    padding: 80px 0;
+}
+
+.titulo{
+    font-weight: 300;
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.titulo .left{
+    text-align: left;
+}
+
+.titulo .rigth{
+    text-align: right;
+}
+
+/*SECTION*/
+.website{
+    display: flex;
+    justify-content: space-between;
+}
+
+.website img{
+    width: 48%;
+}
+
+.website .contenedor-textos-menu{
+    width: 40%;
+}
+
+.parrafo{
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.cta{
+    display: inline-block;
+    text-decoration: none;
+}
